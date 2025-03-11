@@ -101,18 +101,21 @@ const EditCourseForm = ({
 
   return (
     <>
-      <div className="flex flex-col gap-2 sm:flex-row sm:justify-between mb-7">
+      <div className="flex gap-2 sm:flex-row sm:justify-between mb-7">
         <div className="flex gap-5">
           {routes.map((route) => (
             <Link key={route.path} href={route.path}>
-              <Button variant={pathname === route.path ? "default" : "outline"}>
+              <Button
+                className="cursor-pointer"
+                variant={pathname === route.path ? "default" : "outline"}
+              >
                 {route.label}
               </Button>
             </Link>
           ))}
         </div>
 
-        <div className="flex gap-5 items-start">
+        <div className="flex gap-5 items-center">
           <PublishButton
             disabled={!isCompleted}
             courseId={course.id}

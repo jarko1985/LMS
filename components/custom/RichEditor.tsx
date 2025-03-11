@@ -26,7 +26,7 @@ const RichEditor = ({ placeholder, onChange, value }: RichEditorProps) => {
 
   return (
     <ReactQuill
-      className="mb-8"
+      className="lg:mb-8 md:mb-12 mb-18"
       theme="snow"
       value={editorValue}
       onChange={handleEditorChange}
