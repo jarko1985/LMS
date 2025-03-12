@@ -56,7 +56,7 @@ const Delete = ({ item, courseId, sectionId }: DeleteProps) => {
           {isDeleting ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
-            <Trash className="h-4 w-4 text-red-500" />
+            <Trash className="h-10 w-10 text-red-600 cursor-pointer border border-slate-200 p-2 " />
           )}
         </a>
       </AlertDialogTrigger>

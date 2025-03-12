@@ -4,11 +4,9 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
-const SectionDetailsPage = async (
-  props: {
-    params: Promise<{ courseId: string; sectionId: string }>;
-  }
-) => {
+const SectionDetailsPage = async (props: {
+  params: Promise<{ courseId: string; sectionId: string }>;
+}) => {
   const params = await props.params;
   const { userId } = await auth();
 

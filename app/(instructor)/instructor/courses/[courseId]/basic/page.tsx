@@ -4,7 +4,9 @@ import { db } from "@/lib/db";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
-const CourseBasics = async (props: { params: Promise<{ courseId: string }> }) => {
+const CourseBasics = async (props: {
+  params: Promise<{ courseId: string }>;
+}) => {
   const params = await props.params;
   const { userId, redirectToSignIn } = await auth();
   if (!userId) redirectToSignIn();

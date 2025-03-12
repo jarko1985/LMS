@@ -1,3 +1,4 @@
+"use client";
 import { Course } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
 import { Pencil } from "lucide-react";

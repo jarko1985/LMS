@@ -19,13 +19,11 @@ async function CoursesPage() {
   return (
     <div className="px-6 py-4">
       <Link href="/instructor/create-course">
-        <Button variant="default">Create New Course</Button>
+        <Button>Create New Course</Button>
       </Link>
+
       <div className="mt-5">
-        {/* <DataTable columns={columns} data={courses} /> */}
-        {courses.map((course)=>(
-          <Link key={course.id} href={`/instructor/courses/${course.id}/basic`}>{course.title}</Link>
-        ))}
+        <DataTable columns={columns} data={courses} />
       </div>
     </div>
   );
